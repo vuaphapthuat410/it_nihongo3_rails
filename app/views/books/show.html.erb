@@ -9,6 +9,12 @@
   <strong>Number of pages:</strong>
   <%= @book.number_of_pages %>
 </p>
-
+<!-- new code from here-->
+<p>
+  <% if @book.image.attached? %>
+    <%= image_tag @book.image, class: "img-responsive" %>
+  <% end %>
+</p>
+<!--End here-->
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>

@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
-
+<!-- Added code begin here --> 
+<%= link_to('ホーム', root_path) %>
+<p>こんにちは、<%= current_user.email %></p>
+<%= link_to('ログアウト', destroy_user_session_path, method: :delete) %>   
+<!-- End here -->
+<div class="line", style="margin-top: 10px;border-bottom: 2px solid black;"></div>
 <h1>Books</h1>
 
 <table>
