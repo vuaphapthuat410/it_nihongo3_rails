@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     get "signin" => "devise/sessions#new"
     get "signup" => "devise/registrations#new"
     delete "logout" => "destroy_user_session_path"
+    get 'users/show'
   end
   get "books" => "books"
 end
