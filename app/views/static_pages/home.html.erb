@@ -22,12 +22,15 @@
    <div class="box">
       <div class = "link_box">
          <% if user_signed_in? %>
-           <%= link_to('ログアウト', destroy_user_session_path, method: :delete) %>        
+           <%= link_to('ログアウト', destroy_user_session_path, method: :delete) %>
+           &nbsp;&nbsp;
+           <%= link_to('編集ユーザ登録', edit_user_registration_path) %>
          <% else %>
-           <%= link_to('サインイン処理', new_user_session_path) %> 
+           <%= link_to('サインイン処理', new_user_session_path) %>
+           &nbsp;&nbsp;
+           <%= link_to('ユーザ登録', new_user_registration_path) %>
          <% end %>
-         &nbsp;&nbsp;
-         <%= link_to('ユーザ登録', new_user_registration_path) %>
+         
       </div>
       <div class="line">
       </div>
