@@ -41,7 +41,13 @@
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
-
+  <!-- New code from here-->
+  <div class="field">
+    <%= f.label :avatar %><br /> 
+    <%= f.file_field :avatar %>
+  </div>
+  <!--End here-->
+  
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
