@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 <!-- Added code begin here --> 
 <%= link_to('ホーム', root_path) %>
-<p>こんにちは、<%= link_to current_user.email , "users/show" %></p>
+<p>こんにちは、<%= link_to current_user.name , "users/show" %></p>
 <%= link_to('ログアウト', destroy_user_session_path, method: :delete) %>   
 <!-- End here -->
 <div class="line", style="margin-top: 10px;border-bottom: 2px solid black;"></div>

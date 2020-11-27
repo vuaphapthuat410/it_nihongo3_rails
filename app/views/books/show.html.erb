@@ -11,6 +11,10 @@
 </p>
 <!-- new code from here-->
 <p>
+  <strong>Details :</strong>
+  <%= @book.detail %>
+</p>
+<p>
   <% if @book.image.attached? %>
     <%= image_tag @book.image, class: "img-responsive" %>
   <% end %>
