@@ -19,16 +19,19 @@
     <%= image_tag @book.image, class: "img-responsive" %>
   <% end %>
 </p>
-
-<p>
-  <% index = 0 %>
-  <% @book.book_reviews.each do |n| %>
-    <%= index+=1 %>
-    <%= n.review %><br />
-  <% end %>
-</p>
   
 <%= render "book_reviews/form", book_review: @book_review, book: @book %>
+
+<h2>Review Form</h2>
+<table>
+  <tbody>
+    <% @book.book_reviews.each do |book_review| %>
+      <tr>
+        <td>&emsp; &#9679 <%= book_review.review %> (<%= book_review.user_id %>)</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <!--End here-->
 <%= link_to 'Edit', edit_book_path(@book) %>
