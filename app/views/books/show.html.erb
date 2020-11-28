@@ -19,15 +19,15 @@
     <%= image_tag @book.image, class: "img-responsive" %>
   <% end %>
 </p>
-  
+<h2>Review Form</h2>
 <%= render "book_reviews/form", book_review: @book_review, book: @book %>
 
-<h2>Review Form</h2>
+<h2>Review List</h2>
 <table>
   <tbody>
     <% @book.book_reviews.each do |book_review| %>
       <tr>
-        <td>&emsp; &#9679 <%= book_review.review %> (<%= book_review.user_id %>)</td>
+        <td>&emsp; &#9679 <%= book_review.review %> (<%= book_review.user.name %>)</td>
       </tr>
     <% end %>
   </tbody>
