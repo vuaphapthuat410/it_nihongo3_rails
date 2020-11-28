@@ -19,6 +19,17 @@
     <%= image_tag @book.image, class: "img-responsive" %>
   <% end %>
 </p>
+
+<p>
+  <% index = 0 %>
+  <% @book.book_reviews.each do |n| %>
+    <%= index+=1 %>
+    <%= n.review %><br />
+  <% end %>
+</p>
+  
+<%= render "book_reviews/form", book_review: @book_review, book: @book %>
+
 <!--End here-->
-<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Edit', edit_book_path(@book) %>
 <%= link_to 'Back', books_path %>

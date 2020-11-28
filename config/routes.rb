@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :book_reviews
   root 'static_pages#home'
   resources :books
   devise_for :users
